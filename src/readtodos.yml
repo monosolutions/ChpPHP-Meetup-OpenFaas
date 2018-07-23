@@ -1,0 +1,9 @@
+provider:
+  name: faas
+  gateway: http://localhost:31112
+
+functions:
+  readtodos:
+    lang: csharp
+    handler: ./readtodos
+    image: phpmeetup/readtodos

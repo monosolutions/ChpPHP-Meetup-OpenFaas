@@ -1,0 +1,26 @@
+provider:
+  name: faas
+  gateway: http://localhost:31112
+
+functions:
+  addtodo:
+    lang: php
+    handler: ./addtodo
+    image: phpmeetup/addtodo
+  deletetodo:
+    lang: php
+    handler: ./deletetodo
+    image: phpmeetup/deletetodo
+  readtodo:
+    lang: php
+    handler: ./readtodo
+    image: phpmeetup/readtodo
+  readtodos:
+    lang: csharp
+    handler: ./readtodos
+    image: phpmeetup/readtodos
+  updatetodo:
+    lang: php
+    handler: ./updatetodo
+    image: phpmeetup/updatetodo
+

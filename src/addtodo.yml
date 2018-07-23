@@ -1,0 +1,11 @@
+provider:
+  name: faas
+  gateway: http://localhost:31112
+
+functions:
+  addtodo:
+    lang: php
+    handler: ./addtodo
+    image: phpmeetup/addtodo
+
+

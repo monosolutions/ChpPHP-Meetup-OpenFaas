@@ -1,0 +1,12 @@
+request_matcher:
+  path_exact: /todo
+  verbs:
+  - GET
+single_destination:
+  function:
+    function_name: readtodos
+    upstream_name: openfaas-gateway-8080
+extensions:
+  parameters:
+    headers:
+     method: POST
