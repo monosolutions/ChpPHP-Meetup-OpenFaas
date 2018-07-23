@@ -33,8 +33,6 @@ We will use Redis as our todo store.
 helm install stable/redis --name todo-db --namespace openfaas-fn --set persistence.enabled=false
 ```
 
-`helm upgrade openfaas --install openfaas/openfaas --namespace openfaas  --set functionNamespace=openfaas-fn`
-
 ## Issues with pulling local images
 
 If you get issues with pulling your local image, you can set up a repository.
@@ -70,6 +68,4 @@ Change image names from  `phpmeetup/function` to `localhost:5000/function`
 `f$ aas-cli push -f .\stack.yml`
 `$ faas-cli deploy -f .\stack.yml`
 
-## Gloo - Gateway
-
- glooctl route create --http-method get --path-exact /todo --upstream openfaas-gateway-8080 --function readtodos
+## API Management
