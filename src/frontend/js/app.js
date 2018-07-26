@@ -27,7 +27,7 @@
 
 		// app initial state
 		data: {
-			todos: todoStorage.fetch(),
+			todos: todoStorage.getAll(),
 			newTodo: '',
 			editedTodo: null,
 			visibility: 'all'
